@@ -152,3 +152,48 @@ header img {
     
     } 
 } 
+
+/*inicio sección alquileres*/
+#nuestros-alojamientos{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align:center;
+}
+
+#nuestros-alojamientos p{
+    display: none /*desaparecen párrafos en la versión movil*/
+
+} 
+#nuestros-alojmientos h2{
+    margin: top 0;
+}
+
+#nuestros-alojamientos .oferta{
+    .oferta:first-child{
+        background-image: linear-gradient(0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        url(imagenes/hoteles-en-argentina-1-768x512.jpg));
+    }
+
+
+    .oferta:nth-child(2){
+        background-image: linear-gradient(0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        url(imagenes/cabañas1.jpg));
+    }
+
+        
+    oferta:nth-child(3){
+        background-image: linear-gradient(0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        url(imagenes/deptos.jpg));    
+
+
+
+    }
+
+}
+
