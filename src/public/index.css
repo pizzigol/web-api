@@ -1,0 +1,286 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+h1{ font-size: 3.5em;
+    color: blueviolet;
+    text-shadow: 0.05em 0.05em black;
+
+
+
+
+}
+h2{ font-size: 2.7em;
+    color: blueviolet;
+    text-shadow: 0.05em 0.05em black;
+
+}
+
+
+p{ font-size: 1.25em; }
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+    color: black ;
+    background-color: rgb(163, 217, 177)
+    
+}
+
+button:hover{
+    background-color: blueviolet;
+
+}
+
+.contenedor{
+    max-width: 1400px;
+    margin: auto;
+    text-shadow: 0.1em 0.1em yellowgreen;
+
+
+
+
+}
+header{
+    background-color: rgb(163, 217, 177)
+}
+
+header .logo{
+    margin: 0;
+    padding: 5px 30px;
+    font-weight: bold;
+    color: black;
+    font-size: 1.35em;
+
+}
+
+header .contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+
+}
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+header a:hover{
+    color:  blueviolet;
+}
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: url(imagenes/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+header img {
+    width: 150px; 
+    height: auto; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+#contactos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-color: #ffffff  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center
+   
+}
+
+
+
+#contactos .contenedor{
+    
+    text-align: center;
+    padding: 200px 12px;
+   
+}
+
+
+ul {
+    list-style: none;
+    font-size: black;
+    font-weight: bold;
+    color:black;
+
+}
+#quienes-somos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center
+}
+
+
+#quienes-somos .contenedor{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+footer{
+    background-color:rgb(163, 217, 177) ;
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: black;
+}
+
+footer .contenedor{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+
+}
+
+
+/*versióndestok */
+
+
+@media (min-width: 720px) {  /* si el ancho de la pantalla supera los 720 px se aplicaran los sgtes estilos*/
+    header{
+        position: fixed;  /* buscamos que el header quede fijo y no se  modifique al strolerar*/
+        width: 100% /* siempre que elijo posición fixed , with= 100% para que no se desplace el header*/
+    }
+
+    header .contenedor{
+        flex-direction: row; /*row permite que ALQUILERES TEMPORARIOS.COM  baje a la misma linea que CONTACTOS*/
+        justify-content: space-between;  /*CONTACTOS Y QUINES SOMOS Y ALQUILERES se desplazan juntos hacia la derecha de la pantalla*/
+    }     
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;  /* se saca el padding que traía de antes de la parte de abajo del botón*/
+        padding-right: -20px; /* agrega padding a la derecha del botón QUIENES SOMOS para que no quede ese botón tan pegado al borde pantalla*/
+    }
+
+
+    #quienes-somos .contenedor{
+        display: flex; /* modificamos contenedor para que imagen y texto queden en la misma linea y el flex permite que se generen espacios iguales en los costados de los elementos*/
+        justify-content: space-evenly  /*para centrar los elementos, permite que se ubiquen de forma flexible para que no se arrimen entre ellos */ 
+    }
+
+
+
+
+    #quienes-somos .texto{ /* .texto no es el texto sino que es el contenedor del texto*/
+        width: 50%;
+        max-width: 600px;/*ancho máximo al párrafo para que no se ensanche demasiado al abrir la pág*/ 
+        text-align: initial;
+        padding-left: 30px; /*para separar el texto de la imagen */
+        display:flex; /*centrando el texto*/
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    #quienes-somos h2{ /* sacamos margen superior del h2 para que el título quede centrado en cuanto al alto de la pantallla pq arriba está definido el margen de h2*/
+        margin-top: 0px;
+    }
+
+    
+  
+    
+    
+    
+    #quienes-somos .imagen-quienessomos{
+        background-image: url("imagenes/inmobiliaria.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+    
+    #contactos h2{
+        margin-left: 45px ;
+    }
+   
+    #contactos {
+     background-image: url("imagenes/Fondo-contacto-01.jpg");
+     background-repeat: no-repeat;
+     background-size: 700px 700px;
+     background-repeat: no-repeat;
+     background-origin: content-box;
+
+
+    }
+   
+    #contactos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 90vh;
+        background-color: #ffffff  ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center
+       
+    }
+    
+    
+    
+   
+    
+    
+    ul {
+        list-style: none;
+        font-size: black;
+        font-weight: bold;
+        color:black;
+    
+    }
+  
+
+
+
+}   
+
+
